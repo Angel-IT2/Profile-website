@@ -1,57 +1,82 @@
-import "./Home.css";
-import Navbar from "./Navbar";
-import GoogleAnalytics from "./GoogleAnalytics";
-import { Helmet } from "react-helmet";
+import React from "react";
+import aboutData from "./about.json";
+import "./About.css";
 
-function Home() {
+const About = () => {
   return (
-    <div className="home-card">
-      <Helmet>
-        <title>UniPath – Academic & Social Wellness for First-Year Students</title>
-        <meta
-          name="description"
-          content="UniPath is a peer-powered platform that supports first-year university students in academic and social wellness. Connect with peers, share resources, and grow together."
-        />
-        <meta
-          name="keywords"
-          content="university, first-year students, peer mentorship, academic wellness, student wellbeing, chatrooms, study help, UniPath"
-        />
-        <meta name="author" content="UniPath Team – Powered by JugamSoft Technologies" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <div className="about-container">
+      <div className="about-contents">
+        {/* Header Section */}
+        <header className="about-header">
+          <h1>{aboutData.title || "About UniPath"}</h1>
+          <p>
+            {aboutData.subtitle ||
+              "Empowering first-year students to achieve academic wellness and confidence through peer connection and shared learning."}
+          </p>
+        </header>
 
-        {/* Structured Data (JSON-LD) */}
-        <script type="application/ld+json">
-          {`
-          {
-            "@context": "https://schema.org",
-            "@type": "EducationalOrganization",
-            "name": "UniPath",
-            "url": "https://frontend-academicwellness.onrender.com",
-            "logo": "https://frontend-academicwellness.onrender.com/logo.png",
-            "sameAs": [
-              "https://www.facebook.com/unipath",
-              "https://www.twitter.com/unipath",
-              "https://www.linkedin.com/company/unipath"
-            ],
-            "description": "A peer-powered academic and social wellness platform for first-year university students. UniPath connects students to resources, mentorship, and community support to improve academic success and wellbeing.",
-            "founder": {
-              "@type": "Organization",
-              "name": "JugamSoft Technologies"
-            }
-          }
-          `}
-        </script>
-      </Helmet>
+        {/* Academic Wellness Section */}
+        <section className="wellbeing-sections">
+          <h2>Academic Wellness at UniPath</h2>
+          <p>
+            At UniPath, we believe academic wellness is the foundation of a
+            successful university journey. It goes beyond good grades — it’s
+            about developing effective study habits, time management, and
+            resilience through collaboration and mentorship.
+          </p>
 
-      <GoogleAnalytics />
-      <Navbar />
+          {aboutData.sections &&
+            aboutData.sections.map((section, index) => (
+              <div key={index} className="wellbeing-section">
+                <div className="section-content">
+                  <div className="section-text">
+                    <h3>{section.heading}</h3>
+                    <ul>
+                      {section.items.map((item, i) => (
+                        <li key={i}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))}
+        </section>
 
-      <div className="home-content">
-        <h1 className="welcome-text">Welcome to UniPath</h1>
-        <p className="subtitle">Your pathway to academic and social success</p>
+        {/* Benefits Section */}
+        <section className="benefits-section">
+          <h2>Benefits of Academic Wellness with UniPath</h2>
+          <p>
+            UniPath supports students in achieving balance between their
+            academic goals and personal growth. Here’s how our platform
+            enhances academic wellness:
+          </p>
+
+          {aboutData.benefits &&
+            Object.entries(aboutData.benefits).map(([key, items], index) => (
+              <div key={index} className="benefit-category">
+                <h3>{key}</h3>
+                <ul>
+                  {items.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+        </section>
+
+        {/* Closing Message */}
+        <footer className="about-footer">
+          <h2>Our Philosophy</h2>
+          <p>
+            “It’s about learning, not about being the smartest.”  
+            UniPath fosters a supportive academic culture where students learn
+            from one another, grow together, and thrive in their university
+            journey.
+          </p>
+        </footer>
       </div>
     </div>
   );
-}
+};
 
-export default Home;
+export default About;
