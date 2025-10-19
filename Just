@@ -1,57 +1,40 @@
-import "./Home.css";
-import Navbar from "./Navbar";
-import GoogleAnalytics from "./GoogleAnalytics";
-import { Helmet } from "react-helmet";
-
-function Home() {
-  return (
-    <div className="home-card">
-      <Helmet>
-        <title>UniPath – Academic & Social Wellness for First-Year Students</title>
-        <meta
-          name="description"
-          content="UniPath is a peer-powered platform that supports first-year university students in academic and social wellness. Connect with peers, share resources, and grow together."
-        />
-        <meta
-          name="keywords"
-          content="university, first-year students, peer mentorship, academic wellness, student wellbeing, chatrooms, study help, UniPath"
-        />
-        <meta name="author" content="UniPath Team – Powered by JugamSoft Technologies" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        {/* Structured Data (JSON-LD) */}
-        <script type="application/ld+json">
-          {`
-          {
-            "@context": "https://schema.org",
-            "@type": "EducationalOrganization",
-            "name": "UniPath",
-            "url": "https://frontend-academicwellness.onrender.com",
-            "logo": "https://frontend-academicwellness.onrender.com/logo.png",
-            "sameAs": [
-              "https://www.facebook.com/unipath",
-              "https://www.twitter.com/unipath",
-              "https://www.linkedin.com/company/unipath"
-            ],
-            "description": "A peer-powered academic and social wellness platform for first-year university students. UniPath connects students to resources, mentorship, and community support to improve academic success and wellbeing.",
-            "founder": {
-              "@type": "Organization",
-              "name": "JugamSoft Technologies"
-            }
-          }
-          `}
-        </script>
-      </Helmet>
-
-      <GoogleAnalytics />
-      <Navbar />
-
-      <div className="home-content">
-        <h1 className="welcome-text">Welcome to UniPath</h1>
-        <p className="subtitle">Your pathway to academic and social success</p>
-      </div>
-    </div>
-  );
+{
+  "title": "UniPath: Empowering Academic Wellness",
+  "subtitle": "A peer-powered platform that helps first-year university students achieve academic balance, confidence, and success.",
+  "sections": [
+    {
+      "heading": "Building Academic Wellness",
+      "items": [
+        "Personalized academic planning tools and study resources",
+        "Peer mentorship and collaborative learning communities",
+        "Faculty-specific guidance and tips from experienced students",
+        "Time management and academic adjustment strategies"
+      ]
+    },
+    {
+      "heading": "Supporting the Whole Student",
+      "items": [
+        "Encouraging peer connection and a sense of belonging",
+        "Providing mental and emotional support through shared experiences",
+        "Creating a safe space for academic and personal growth"
+      ]
+    }
+  ],
+  "benefits": {
+    "Why Academic Wellness Matters": [
+      "Improves focus, motivation, and academic confidence",
+      "Promotes healthy study habits and sustainable learning routines",
+      "Prevents burnout through balance and peer support"
+    ],
+    "How UniPath Supports Academic Growth": [
+      "Connects first-year students with senior mentors for practical guidance",
+      "Provides structured tools for organizing study schedules and resources",
+      "Encourages collaboration and knowledge-sharing across faculties"
+    ],
+    "Long-Term Impact": [
+      "Empowers students to take control of their academic journey",
+      "Strengthens resilience, discipline, and self-directed learning",
+      "Creates a culture of support, growth, and academic excellence"
+    ]
+  }
 }
-
-export default Home;
