@@ -1,26 +1,25 @@
 import "./Home.css";
 import Navbar from "./Navbar";
-import GoogleAnalytics from "./GoogleAnalytics"; // GA component
-import { Helmet } from "react-helmet"; // Import Helmet
+import GoogleAnalytics from "./GoogleAnalytics";
+import { Helmet } from "react-helmet";
 
 function Home() {
   return (
     <div className="home-card">
-      
-      {/* ======= HELMET START ======= */}
       <Helmet>
-        <title>UniPath - Home</title>
+        <title>UniPath – Academic & Social Wellness for First-Year Students</title>
         <meta
           name="description"
-          content="UniPath helps students discover courses, compare programs, and access academic resources easily."
+          content="UniPath is a peer-powered platform that supports first-year university students in academic and social wellness. Connect with peers, share resources, and grow together."
         />
-        <meta name="author" content="Vutshila Angel Maluleke" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="keywords"
-          content="university, courses, student resources, academic wellness, study guides"
+          content="university, first-year students, peer mentorship, academic wellness, student wellbeing, chatrooms, study help, UniPath"
         />
-        {/* Structured Data */}
+        <meta name="author" content="UniPath Team – Powered by JugamSoft Technologies" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        {/* Structured Data (JSON-LD) */}
         <script type="application/ld+json">
           {`
           {
@@ -34,19 +33,22 @@ function Home() {
               "https://www.twitter.com/unipath",
               "https://www.linkedin.com/company/unipath"
             ],
-            "description": "UniPath helps students discover courses, compare programs, and access academic resources easily."
+            "description": "A peer-powered academic and social wellness platform for first-year university students. UniPath connects students to resources, mentorship, and community support to improve academic success and wellbeing.",
+            "founder": {
+              "@type": "Organization",
+              "name": "JugamSoft Technologies"
+            }
           }
           `}
         </script>
       </Helmet>
-      {/* ======= HELMET END ======= */}
 
-      <GoogleAnalytics /> {/* Tracks pageviews automatically */}
+      <GoogleAnalytics />
       <Navbar />
 
       <div className="home-content">
         <h1 className="welcome-text">Welcome to UniPath</h1>
-        <p className="subtitle">Your pathway to success</p>
+        <p className="subtitle">Your pathway to academic and social success</p>
       </div>
     </div>
   );
