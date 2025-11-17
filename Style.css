@@ -280,6 +280,9 @@ section {
 .skill-item:nth-child(5) { transform: rotate(205.71deg) translate(140px) rotate(-205.71deg); }
 .skill-item:nth-child(6) { transform: rotate(257.14deg) translate(140px) rotate(-257.14deg); }
 .skill-item:nth-child(7) { transform: rotate(308.57deg) translate(140px) rotate(-308.57deg); }
+.skill-item:nth-child(8) { transform: rotate(280deg) translate(140px) rotate(-280deg); }
+.skill-item:nth-child(9) { transform: rotate(320deg) translate(140px) rotate(-320deg); }
+
 
 .certificates-grid {
   display: flex;
