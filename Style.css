@@ -252,6 +252,15 @@ section {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.skill-item.long-text span {
+  font-size: 11px;
+  line-height: 1.1;
+  text-align: center;
+  padding: 0 4px;
+  display: block;
+  white-space: normal;
+}
+
 .skill-item i {
   font-size: 30px;
   color: var(--dark);
@@ -594,5 +603,6 @@ footer {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 12px;
 }
+
 
 
