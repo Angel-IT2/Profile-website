@@ -225,10 +225,11 @@ section {
 }
 
 /* UPDATED SKILLS GRID - CIRCULAR AND OVERLAPPING */
+/* UPDATED SKILLS GRID - PERFECT CIRCLE */
 .skills-grid {
   position: relative;
-  width: 280px;
-  height: 280px;
+  width: 320px;
+  height: 320px;
   margin: 30px auto 0;
   border-radius: 50%;
 }
@@ -237,9 +238,9 @@ section {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 70px;
-  height: 70px;
-  margin: -35px;
+  width: 80px;
+  height: 80px;
+  margin: -40px;
   border-radius: 50%;
   background: white;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -252,14 +253,14 @@ section {
 }
 
 .skill-item i {
-  font-size: 28px;
+  font-size: 32px;
   color: var(--dark);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .skill-item span {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--dark);
 }
@@ -274,18 +275,16 @@ section {
   transform: scale(1.3);
 }
 
-.skill-item:nth-child(1)  { transform: rotate(0deg)   translate(110px) rotate(0deg); }
-.skill-item:nth-child(2)  { transform: rotate(30deg)  translate(110px) rotate(-30deg); }
-.skill-item:nth-child(3)  { transform: rotate(60deg)  translate(110px) rotate(-60deg); }
-.skill-item:nth-child(4)  { transform: rotate(90deg)  translate(110px) rotate(-90deg); }
-.skill-item:nth-child(5)  { transform: rotate(120deg) translate(110px) rotate(-120deg); }
-.skill-item:nth-child(6)  { transform: rotate(150deg) translate(110px) rotate(-150deg); }
-.skill-item:nth-child(7)  { transform: rotate(180deg) translate(110px) rotate(-180deg); }
-.skill-item:nth-child(8)  { transform: rotate(210deg) translate(110px) rotate(-210deg); }
-.skill-item:nth-child(9)  { transform: rotate(240deg) translate(110px) rotate(-240deg); }
-.skill-item:nth-child(10) { transform: rotate(270deg) translate(110px) rotate(-270deg); }
-.skill-item:nth-child(11) { transform: rotate(300deg) translate(110px) rotate(-300deg); }
-.skill-item:nth-child(12) { transform: rotate(330deg) translate(110px) rotate(-330deg); }
+/* Neatly spaced 9 skills in a circle */
+.skill-item:nth-child(1) { transform: rotate(0deg)    translate(140px) rotate(0deg); }
+.skill-item:nth-child(2) { transform: rotate(40deg)   translate(140px) rotate(-40deg); }
+.skill-item:nth-child(3) { transform: rotate(80deg)   translate(140px) rotate(-80deg); }
+.skill-item:nth-child(4) { transform: rotate(120deg)  translate(140px) rotate(-120deg); }
+.skill-item:nth-child(5) { transform: rotate(160deg)  translate(140px) rotate(-160deg); }
+.skill-item:nth-child(6) { transform: rotate(200deg)  translate(140px) rotate(-200deg); }
+.skill-item:nth-child(7) { transform: rotate(240deg)  translate(140px) rotate(-240deg); }
+.skill-item:nth-child(8) { transform: rotate(280deg)  translate(140px) rotate(-280deg); }
+.skill-item:nth-child(9) { transform: rotate(320deg)  translate(140px) rotate(-320deg); }
 
 .certificates-grid {
   display: flex;
@@ -584,3 +583,4 @@ footer {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 12px;
 }
+
