@@ -274,12 +274,12 @@ section {
 }
 
 .skill-item:nth-child(1) { transform: rotate(0deg) translate(140px) rotate(0deg); }
-.skill-item:nth-child(2) { transform: rotate(51.43deg) translate(140px) rotate(-51.43deg); }
-.skill-item:nth-child(3) { transform: rotate(102.86deg) translate(140px) rotate(-102.86deg); }
-.skill-item:nth-child(4) { transform: rotate(154.29deg) translate(140px) rotate(-154.29deg); }
-.skill-item:nth-child(5) { transform: rotate(205.71deg) translate(140px) rotate(-205.71deg); }
-.skill-item:nth-child(6) { transform: rotate(257.14deg) translate(140px) rotate(-257.14deg); }
-.skill-item:nth-child(7) { transform: rotate(308.57deg) translate(140px) rotate(-308.57deg); }
+.skill-item:nth-child(2) { transform: rotate(40deg) translate(140px) rotate(-40deg); }
+.skill-item:nth-child(3) { transform: rotate(80deg) translate(140px) rotate(-80deg); }
+.skill-item:nth-child(4) { transform: rotate(120deg) translate(140px) rotate(-120deg); }
+.skill-item:nth-child(5) { transform: rotate(160deg) translate(140px) rotate(-160deg); }
+.skill-item:nth-child(6) { transform: rotate(200deg) translate(140px) rotate(-200deg); }
+.skill-item:nth-child(7) { transform: rotate(240deg) translate(140px) rotate(-240deg); }
 .skill-item:nth-child(8) { transform: rotate(280deg) translate(140px) rotate(-280deg); }
 .skill-item:nth-child(9) { transform: rotate(320deg) translate(140px) rotate(-320deg); }
 
@@ -592,3 +592,4 @@ footer {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 12px;
 }
+
